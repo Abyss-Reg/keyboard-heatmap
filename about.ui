@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>616</width>
+    <height>213</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>关于</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>129</x>
+     <y>20</y>
+     <width>341</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>15</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>本程序由狐小九Little_Jiu开发
+感谢使用</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>100</y>
+     <width>531</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;a href=&quot;https://github.com/Abyss-Reg/keyboard-heatmap&quot; style=&quot;font-size=10px; color:inherit&quot;&gt;&lt;b&gt;项目开源链接：https://github.com/Abyss-Reg/keyboard-heatmap&lt;/b&gt;&lt;/a&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>150</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>确认</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>310</x>
+     <y>175</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>307</x>
+     <y>113</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Form</sender>
+   <signal>destroyed()</signal>
+   <receiver>Form</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>307</x>
+     <y>113</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>307</x>
+     <y>113</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

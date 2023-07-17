@@ -1,5 +1,12 @@
 import time
 
+app_name = "keyboard heatmap"
+
+
+def appName():
+    return app_name
+
+
 def getTime(timeMode:int,timeFormat:str = None):
     '''
         参数：
